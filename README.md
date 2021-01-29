@@ -29,6 +29,9 @@ In order to use the repo please note the following:
   The activate method has thrown an exception java.lang.RuntimeException: Unable to create snapshot class for interface       com.liferay.onboarding.model.listener.OnboardingModelListenerConfiguration
   Then please make sure to visit “system settings -> platform -> third party -> “form-user-account-listener-config-name” and make sure to save the configuration.
 
+# Configuration Screenshot
+
+[![screencapture-10-211-55-14-8080-group-control-panel-manage-1611959877891.png](https://i.postimg.cc/fbKQZytc/screencapture-10-211-55-14-8080-group-control-panel-manage-1611959877891.png)](https://postimg.cc/Z9CMxTLn)
 
 
 
