@@ -15,7 +15,7 @@ interface OnboardingModelListenerConfiguration {
             required = false,
             deflt = "0"
     )
-    public long formId();
+    public String formId();
 
     @Meta.AD(
             name = "email-address-field",
@@ -51,11 +51,19 @@ interface OnboardingModelListenerConfiguration {
 
     @Meta.AD(
             name = "role-id",
-            description = "Assign approved customer to this role id",
+            description = "Assign approved user to this role id",
             required = true,
             deflt = "0"
     )
-    public long roleID();
+    public String roleID();
+    @Meta.AD(
+            name = "site-id",
+            description = "Assign approved user to this site id",
+            required = true,
+            deflt = "0"
+    )
+    public String siteID();
+
 
     @Meta.AD(
             name = "create-user",

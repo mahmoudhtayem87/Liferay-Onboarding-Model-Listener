@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cdb109d-4157-470c-9153-6e06c71c82ec" name="Default Changelist" comment="" />
+    <list default="true" id="0cdb109d-4157-470c-9153-6e06c71c82ec" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/liferay-onboarding.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/liferay-onboarding.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docker/deploy/com.liferay.onboarding.impl-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/docker/deploy/com.liferay.onboarding.impl-1.0.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bundles/osgi/modules/com.liferay.onboarding.impl.jar" beforeDir="false" afterPath="$PROJECT_DIR$/bundles/osgi/modules/com.liferay.onboarding.impl.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onboarding-impl/build/classes/java/main/com/liferay/onboarding/model/listener/OnboardingModelListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/onboarding-impl/build/classes/java/main/com/liferay/onboarding/model/listener/OnboardingModelListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onboarding-impl/build/classes/java/main/com/liferay/onboarding/model/listener/OnboardingModelListenerConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/onboarding-impl/build/classes/java/main/com/liferay/onboarding/model/listener/OnboardingModelListenerConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onboarding-impl/build/libs/com.liferay.onboarding.impl-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/onboarding-impl/build/libs/com.liferay.onboarding.impl-1.0.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onboarding-impl/build/tmp/jar/com.liferay.onboarding.impl-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/onboarding-impl/build/tmp/jar/com.liferay.onboarding.impl-1.0.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onboarding-impl/src/main/java/com/liferay/onboarding/model/listener/OnboardingModelListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/onboarding-impl/src/main/java/com/liferay/onboarding/model/listener/OnboardingModelListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onboarding-impl/src/main/java/com/liferay/onboarding/model/listener/OnboardingModelListenerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/onboarding-impl/src/main/java/com/liferay/onboarding/model/listener/OnboardingModelListenerConfiguration.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +64,11 @@
       </state>
     </system>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1miFwCJ6svbOIbnJHCAB0qrkqQe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -69,15 +91,13 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.liferay-n4g6 [buildDockerImage]">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -188,11 +208,26 @@
       <workItem from="1610526606843" duration="5462000" />
       <workItem from="1611644227807" duration="75000" />
       <workItem from="1611644347736" duration="424000" />
-      <workItem from="1611644851973" duration="4845000" />
+      <workItem from="1611644851973" duration="5304000" />
+      <workItem from="1612424464769" duration="585000" />
+      <workItem from="1612425090276" duration="2915000" />
+      <workItem from="1612636300622" duration="1056000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
