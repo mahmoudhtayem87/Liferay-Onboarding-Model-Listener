@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cdb109d-4157-470c-9153-6e06c71c82ec" name="Default Changelist" comment="">
+    <list default="true" id="0cdb109d-4157-470c-9153-6e06c71c82ec" name="Default Changelist" comment="new configuration has been added to assign on boarded user to site">
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" afterDir="false" />
@@ -12,16 +12,13 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/liferay-onboarding.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/liferay-onboarding.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/docker/deploy/com.liferay.onboarding.impl-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/docker/deploy/com.liferay.onboarding.impl-1.0.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bundles/osgi/modules/com.liferay.onboarding.impl.jar" beforeDir="false" afterPath="$PROJECT_DIR$/bundles/osgi/modules/com.liferay.onboarding.impl.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/onboarding-impl/build/classes/java/main/com/liferay/onboarding/model/listener/OnboardingModelListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/onboarding-impl/build/classes/java/main/com/liferay/onboarding/model/listener/OnboardingModelListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onboarding-impl/build/classes/java/main/com/liferay/onboarding/model/listener/OnboardingModelListenerConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/onboarding-impl/build/classes/java/main/com/liferay/onboarding/model/listener/OnboardingModelListenerConfiguration.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/onboarding-impl/build/libs/com.liferay.onboarding.impl-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/onboarding-impl/build/libs/com.liferay.onboarding.impl-1.0.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/onboarding-impl/build/tmp/jar/com.liferay.onboarding.impl-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/onboarding-impl/build/tmp/jar/com.liferay.onboarding.impl-1.0.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/onboarding-impl/src/main/java/com/liferay/onboarding/model/listener/OnboardingModelListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/onboarding-impl/src/main/java/com/liferay/onboarding/model/listener/OnboardingModelListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onboarding-impl/src/main/java/com/liferay/onboarding/model/listener/OnboardingModelListenerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/onboarding-impl/src/main/java/com/liferay/onboarding/model/listener/OnboardingModelListenerConfiguration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +47,12 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="liferay-onboarding" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="liferay-onboarding" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -91,17 +94,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.liferay-n4g6 [buildDockerImage]">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="liferay-n4g6 [buildDockerImage]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -211,8 +203,20 @@
       <workItem from="1611644851973" duration="5304000" />
       <workItem from="1612424464769" duration="585000" />
       <workItem from="1612425090276" duration="2915000" />
-      <workItem from="1612636300622" duration="1056000" />
+      <workItem from="1612636300622" duration="2757000" />
+      <workItem from="1612727938395" duration="8063000" />
+      <workItem from="1612934282695" duration="407000" />
+      <workItem from="1613156443010" duration="333000" />
+      <workItem from="1613157501413" duration="2197000" />
     </task>
+    <task id="LOCAL-00001" summary="new configuration has been added to assign on boarded user to site">
+      <created>1612637618869</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1612637618869</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,5 +233,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="new configuration has been added to assign on boarded user to site" />
+    <option name="LAST_COMMIT_MESSAGE" value="new configuration has been added to assign on boarded user to site" />
   </component>
 </project>

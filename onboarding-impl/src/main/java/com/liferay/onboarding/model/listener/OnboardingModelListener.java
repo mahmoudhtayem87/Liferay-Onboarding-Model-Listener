@@ -1,11 +1,13 @@
 package com.liferay.onboarding.model.listener;
 
+import com.liferay.counter.kernel.service.CounterLocalService;
 import com.liferay.dynamic.data.mapping.model.DDMFormInstanceRecord;
 import com.liferay.dynamic.data.mapping.model.DDMFormInstanceRecordVersion;
 import com.liferay.dynamic.data.mapping.service.DDMFormInstanceRecordLocalService;
 import com.liferay.dynamic.data.mapping.storage.DDMFormFieldValue;
 import com.liferay.dynamic.data.mapping.storage.DDMFormValues;
 import com.liferay.journal.util.comparator.FeedIDComparator;
+import com.liferay.petra.string.StringPool;
 import com.liferay.portal.configuration.metatype.bnd.util.ConfigurableUtil;
 import com.liferay.portal.kernel.exception.ModelListenerException;
 import com.liferay.portal.kernel.exception.PortalException;
@@ -17,6 +19,7 @@ import com.liferay.portal.kernel.model.Role;
 import com.liferay.portal.kernel.model.User;
 import com.liferay.portal.kernel.service.CompanyLocalService;
 import com.liferay.portal.kernel.service.UserLocalService;
+import com.liferay.portal.kernel.util.LocaleUtil;
 import com.liferay.portal.kernel.workflow.WorkflowConstants;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -50,6 +53,7 @@ public class OnboardingModelListener
   public void onAfterUpdate(DDMFormInstanceRecord formRecord)
     throws ModelListenerException {
     try {
+
       String formsIds = _config.formId();
       if (
           isFormMonitored(formRecord.getFormInstanceId()) && formRecord.getStatus() == 1
@@ -132,41 +136,49 @@ public class OnboardingModelListener
       long currentFormID = formRecord.getFormInstanceId();
       _log.info(getFieldID( _config.firstName(),currentFormID));
       CollectFormValues(ddmFormValues.getDDMFormFieldValuesMap(), FormData);
-      //Liferay 7.3 form fields have an auto-generated name. Hence the hardcoded horrible fieldnames below
       _log.info(FormData);
-      User newUser = _userLocalService.addUser(
-        _companyLocalService
-          .getCompany(formRecord.getCompanyId())
-          .getDefaultUser()
-          .getUserId(),
-        formRecord.getCompanyId(),
-        false,
-        "liferay$",
-        "liferay$",
-        true,
-        null,
-        FormData.get(getFieldID( _config.emailAddressField(),currentFormID)).get(0),
-        -1L,
-        null,
-        formRecord.getDDMFormValues().getDefaultLocale(),
-        FormData.get(getFieldID( _config.firstName(),currentFormID)).get(0),
-        FormData.get(getFieldID( _config.middleName(),currentFormID)).get(0),
-        FormData.get(getFieldID( _config.lastName(),currentFormID)).get(0),
-        -1L,
-        -1L,
-        false,
-        1,
-        1,
-        1970,
-        null,
-        null,
-        null,
-        null,
-        null,
-        false,
-        null
-      );
+
+      long companyId = formRecord.getCompanyId();
+      long userID =_counterLocalService.increment();
+      long adminUserId =  _companyLocalService
+              .getCompany(formRecord.getCompanyId())
+              .getDefaultUser()
+              .getUserId();
+      String firstName = FormData.get(getFieldID( _config.firstName(),currentFormID)).get(0);
+      String middleName =FormData.get(getFieldID( _config.middleName(),currentFormID)).get(0);
+      String lastName = FormData.get(getFieldID( _config.lastName(),currentFormID)).get(0);
+      String emailAddress = FormData.get(getFieldID( _config.emailAddressField(),currentFormID)).get(0);
+      User newUser = _userLocalService.addUser(adminUserId,
+              companyId,
+              false,
+              "liferay",
+              "liferay",
+              false,
+              "User_"+userID,
+              emailAddress,
+              0L,
+              StringPool.BLANK,
+              LocaleUtil.getDefault(),
+              firstName,
+              StringPool.BLANK,
+              lastName,
+              0L,
+              0L,
+              true,
+              Calendar.JANUARY,
+              1,
+              1970,
+              StringPool.BLANK,
+              new long[0],
+              new long[0],
+              new long[0],
+              new long[0],
+              false,
+              null);
+      Thread.sleep(100);
       newUser.setStatus(WorkflowConstants.STATUS_INACTIVE);
+      newUser.setAgreedToTermsOfUse(true);
+      newUser.setNew(true);
       _userLocalService.updateUser(newUser);
     } catch (Exception e) {
       _log.error("error at addInactiveUser Method", e);
@@ -203,6 +215,7 @@ public class OnboardingModelListener
       );
       user.setStatus(WorkflowConstants.STATUS_APPROVED);
       _userLocalService.updateUser(user);
+
     } catch (Exception e) {
       _log.error("error at activateUser Method", e);
     }
@@ -213,7 +226,6 @@ public class OnboardingModelListener
   */
   private void assignRoleToCreatedUser(DDMFormInstanceRecord formRecord) {
     try {
-      User Creator = _userLocalService.getUserById(formRecord.getUserId());
       long currentFormID = formRecord.getFormInstanceId();
       long RoleID = getMonitoredFormRoles(currentFormID);
       HashMap<String, ArrayList<String>> FormData = new HashMap<String, ArrayList<String>>();
@@ -222,7 +234,6 @@ public class OnboardingModelListener
         formRecord.getFormInstance().getDDMForm()
       );
       CollectFormValues(ddmFormValues.getDDMFormFieldValuesMap(), FormData);
-      ////_log.debug("Entering activateUser() method");
       User user = _userLocalService.getUserByEmailAddress(
         formRecord.getCompanyId(),
         FormData.get(getFieldID(_config.emailAddressField(),formRecord.getFormInstanceId())).get(0)
@@ -311,4 +322,6 @@ public class OnboardingModelListener
 
   @Reference
   private UserLocalService _userLocalService;
+  @Reference
+  private CounterLocalService _counterLocalService;
 }
