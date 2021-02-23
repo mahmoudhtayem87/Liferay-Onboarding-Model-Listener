@@ -244,7 +244,6 @@ public class OnboardingModelListener
       _log.error("error at assignRoleToCreatedUser Method", e);
     }
   }
-
   /*
 	Assign user to the selected role in the model listener configurations, this method will 
 	be invoked if the user has not been created by the Model Listener and will use the creator
