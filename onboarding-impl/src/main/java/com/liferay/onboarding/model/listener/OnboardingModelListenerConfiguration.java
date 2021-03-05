@@ -36,7 +36,7 @@ interface OnboardingModelListenerConfiguration {
     @Meta.AD(
             name = "middle-name",
             description = "Form Field ID",
-            required = true,
+            required = false,
             deflt = "0"
     )
     public String middleName();
@@ -48,6 +48,23 @@ interface OnboardingModelListenerConfiguration {
             deflt = "0"
     )
     public String lastName();
+    
+
+    @Meta.AD(
+            name = "birthDay",
+            description = "Form Field ID",
+            required = true,
+            deflt = "0"
+    )
+    public String birthDay();
+    
+    @Meta.AD(
+            name = "phoneNumber",
+            description = "Form Field ID",
+            required = true,
+            deflt = "0"
+    )
+	public String phoneNumber();
 
     @Meta.AD(
             name = "role-id",
